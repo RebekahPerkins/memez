@@ -8,8 +8,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class MemeController {
 
     @RequestMapping("/")
-    @ResponseBody
     public String listMemes(){
-        return "list of all memes";
+        return "home";
     }
 }
