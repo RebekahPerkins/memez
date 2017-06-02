@@ -1,6 +1,17 @@
 group 'com.rebekahperkins'
 version '1.0-SNAPSHOT'
 
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.5.3.RELEASE'
+    }
+}
+
+apply plugin: 'spring-boot'
 apply plugin: 'java'
 
 sourceCompatibility = 1.8
@@ -10,8 +21,8 @@ repositories {
 }
 
 dependencies {
-    // https://mvnrepository.com/artifact/org.springframework/spring-webmvc
-    compile group: 'org.springframework', name: 'spring-webmvc', version: '4.3.8.RELEASE'
+// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '1.5.3.RELEASE'
 
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
